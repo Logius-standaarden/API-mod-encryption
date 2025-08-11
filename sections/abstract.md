@@ -16,3 +16,4 @@ The Nederlandse API Strategie consists of [a set of distinct documents](https://
 Before reading this document it is advised to gain knowledge of the informative documents, in particular the [Architecture](https://geonovum.github.io/KP-APIs/API-strategie-algemeen/Architectuur/).
 
 <!-- below: specific part for this module only -->
+This ADR Module contains the requirements for ADR REST-API encryption based on JWE.

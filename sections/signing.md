@@ -1,0 +1,41 @@
+# Encryption in combination with signing
+
+The following diagram shows the order in which encryption & signing must be applied when encryption is used in combination with signing
+
+
+```mermaid
+graph TD;
+    Request--"JSON(payload)"-->SignA;
+    SignA--"JWE(JWS(JSON(payload)))"-->SignB;
+    SignB--"JSON(payload)"-->Proc;
+    Proc--"JSON(payload)"-->SignC;
+    SignC--"JWS(JWE(JSON(payload)))"-->SignD;
+    SignD--"JSON(payload)"-->Response;
+    
+    
+    direction TB
+    subgraph Service Provider
+    direction TB
+    SignB("Decrypt with Provider private key</br> 
+    -----------------------</br>
+    Verify signature with Requester public key")
+    Proc(Process Request)
+    SignC("Sign with Provider private key </br>
+    -----------------------</br>
+    Encrypt with Requester public key")    
+    
+    end
+    subgraph Service Requester
+    direction TB
+    Request:::sc
+    SignA("Sign with Requester private key</br>
+    -----------------------</br>
+    Encrypt with Provider public key")
+    SignD("Decrypt with Requester private key </br>
+    -----------------------</br>
+    Verify signature with Provider public key")
+    classDef sc fill:#f96
+    Response:::sc
+    end
+```
+<figure><figcaption>Signing & Encryption</figcaption></figure>
