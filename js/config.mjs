@@ -42,9 +42,12 @@ loadRespecWithConfiguration({
           generatedFigures.push(figure);
         }
       }
-      mermaid.run({
+      await mermaid.run({
         nodes: generatedFigures,
       });
+      for (const figure of generatedFigures) {
+        figure.classList.remove('hljs');
+      }
     }
   ]
 
