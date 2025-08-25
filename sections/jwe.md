@@ -34,8 +34,10 @@ Accept: application/jose+json
 
 The following algorithms MUST be applied used.
 
-* Key Management: [RSA-OAEP](https://datatracker.ietf.org/doc/html/rfc7518#section-4.3)
-* Content encryption: [A256GCM](https://datatracker.ietf.org/doc/html/rfc7518#section-5.3)
+<ul>
+<li>Key Management: <a href="https://datatracker.ietf.org/doc/html/rfc7518#section-4.3">RSA-OAEP</a></li>
+<li>Content encryption: <a href="https://datatracker.ietf.org/doc/html/rfc7518#section-5.3">A256GCM</a></li>
+</ul>
 
    </dd>
 </dl>
