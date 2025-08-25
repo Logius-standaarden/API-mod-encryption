@@ -12,7 +12,7 @@ For HTTP payload encryption [[[rfc7516]]] MUST be applied with the following req
 
 * An encrypted request needs to pass application/jose+json as the value for the Content-Type and Accept headers:
 
-```
+```http
 Content-Type: application/jose+json
 Accept: application/jose+json
 ```
@@ -22,10 +22,12 @@ Accept: application/jose+json
 * Use for encryption the public key from the X.509 certificate of the other party
 * Use the following parameters in the JWE protected header:
 
-```
-alg : "RSA-OAEP",
-enc : "A256GCM",
-typ : "JWE"
+```json
+{
+  "alg": "RSA-OAEP",
+  "enc": "A256GCM",
+  "typ": "JWE"
+}
 ```
 
 * JWE compact serialization format is used
