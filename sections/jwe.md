@@ -6,7 +6,7 @@
    <dt>Statement</dt>
    <dd>
 
-The following specific requirements MUST be met.
+For HTTP payload encryption [[[rfc7516]]] MUST be applied with the following requirements.
 
 * The request is sent to Service Provider with `content-type: application/jose+json`.
 
