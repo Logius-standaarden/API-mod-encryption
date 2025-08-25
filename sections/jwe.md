@@ -1,7 +1,7 @@
 # Design rules
 
 <div class="rule" id="/encryption/jwe" data-type="technical">
-   <p class="rulelab">Use RFC 7516 for encryption.</p>
+   <p class="rulelab">Use JSON Web Encryption (JWE)</p>
    <dl>
    <dt>Statement</dt>
    <dd>
