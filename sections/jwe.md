@@ -1,4 +1,4 @@
-# JWE encryption
+# Design rules
 
 <div class="rule" id="/encryption/jwe" data-type="technical">
    <p class="rulelab">Use RFC 7516 for encryption.</p>
