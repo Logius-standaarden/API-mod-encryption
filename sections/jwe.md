@@ -1,6 +1,40 @@
 # JWE encryption
 
- For encryption [[[rfc7516]]] is used.
+<div class="rule" id="/encryption/jwe" data-type="technical">
+   <p class="rulelab">Use RFC 7516 for encryption.</p>
+   <dl>
+   <dt>Statement</dt>
+   <dd>
+
+The following specific requirements MUST be met.
+
+* The request is sent to Service Provider with `content-type: application/jose+json`.
+
+* An encrypted request needs to pass application/jose+json as the value for the Content-Type and Accept headers:
+```
+Content-Type: application/jose+json
+Accept: application/jose+json
+```
+
+* When the encrypted request uses an unsupported algorithm, the Service Provider rejects the request with a 400 HTTP response.
+
+* Use for encryption the public key from the X.509 certificate of the other party
+* Use the following parameters in the JWE protected header:
+```
+alg : "RSA-OAEP", 
+enc : "A256GCM",
+typ : "JWE"
+```
+
+* JWE compact serialization format is used
+
+The following algorithms MUST be applied used.
+* Key Management: [RSA-OAEP](https://datatracker.ietf.org/doc/html/rfc7518#section-4.3)
+* Content encryption: [A256GCM](https://datatracker.ietf.org/doc/html/rfc7518#section-5.3)
+   </dd>
+</dl>
+</div>
+
 
 ## Basic JWE proces flow
 
@@ -47,35 +81,3 @@ graph TD
 * 3 Service Provider performs the request and then generates an encrypted response;
 
 * 4 Service Requester decrypts response using Requester private key
-
-## Parameters and requirements
-
-The following specific requirements MUST be met:
-
-* The request is sent to Service Provider with the content-type: application/jose+json.
-
-* An encrypted request needs to pass application/jose+json as the value for the Content-Type and Accept headers:
-```
-Content-Type: application/jose+json
-Accept: application/jose+json
-```
-
-* When the encrypted request uses an unsupported algorithm, the Service Provider rejects the request with a 400 HTTP response.
-
-* Use for encryption the public key from the X.509 certificate of the other party
-* Use the following parameters in the JWE protected header:
-```
-alg : "RSA-OAEP", 
-enc : "A256GCM",
-typ : "JWE"
-```
-
-* JWE compact serialization format is used
-
-## Cryptographic Algorithms
-
-The following algorithms are used
-* Key Management : [RSA-OAEP](https://datatracker.ietf.org/doc/html/rfc7518#section-4.3)
-* Content encryption : [A256GCM](https://datatracker.ietf.org/doc/html/rfc7518#section-5.3)
-
-As defined in [[rfc7518]].
