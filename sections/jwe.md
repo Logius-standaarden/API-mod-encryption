@@ -1,4 +1,18 @@
-# Design rules
+# Normative Design Rules
+
+## Summary
+
+Design rules can be technical rules, which should be tested automatically and functional rules which should be considered when designing and building the API.
+
+#### List of functional rules
+
+<ul id="functionalList"></ul>
+
+#### List of technical rules
+
+<ul id="technicalList"></ul>
+
+## Design rules
 
 <div class="rule" id="/encryption/jwe" data-type="technical">
    <p class="rulelab">Use JSON Web Encryption (JWE)</p>
