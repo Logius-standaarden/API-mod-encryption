@@ -1,14 +1,9 @@
 # Normative Design Rules
 
+
+All design rules in this module are technical rules, which should be tested automatically.
+
 ## Summary
-
-Design rules can be technical rules, which should be tested automatically and functional rules which should be considered when designing and building the API.
-
-### List of functional rules
-
-<ul id="functionalList"></ul>
-
-### List of technical rules
 
 <ul id="technicalList"></ul>
 
