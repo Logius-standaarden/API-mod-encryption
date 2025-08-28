@@ -1,4 +1,12 @@
-# Design rules
+# Normative Design Rules
+
+All design rules in this module are technical rules, which should be tested automatically.
+
+## Summary
+
+<ul id="technicalList"></ul>
+
+## Design rules
 
 <div class="rule" id="/encryption/jwe" data-type="technical">
    <p class="rulelab">Use JSON Web Encryption (JWE)</p>
