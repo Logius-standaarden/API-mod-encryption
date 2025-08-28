@@ -1,6 +1,5 @@
 # Normative Design Rules
 
-
 All design rules in this module are technical rules, which should be tested automatically.
 
 ## Summary
