@@ -1,10 +1,8 @@
 # Normative Design Rules
 
-All design rules in this module are technical rules, which should be tested automatically.
-
 ## Summary
 
-<ul id="technicalList"></ul>
+<div id="design-rule-summary"></div>
 
 ## Design rules
 
