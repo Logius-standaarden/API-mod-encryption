@@ -6,9 +6,9 @@ loadRespecWithConfiguration({
   pubDomain: "api",
   shortName: "mod-encryption",
   specType: "ST",
-  specStatus: "WV",
-  publishDate: "2024-09-06",
-  publishVersion: "1.0.2",
+  specStatus: "DEF",
+  publishDate: "2026-06-18",
+  publishVersion: "1.0.0",
   latestVersion: "https://logius-standaarden.github.io/API-mod-encryption/",
   prevVersion: [],
   editors: [{
