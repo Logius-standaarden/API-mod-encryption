@@ -9,7 +9,6 @@ loadRespecWithConfiguration({
   specStatus: "WV",
   publishDate: "2024-09-06",
   publishVersion: "1.0.2",
-  latestVersion: "https://logius-standaarden.github.io/API-mod-encryption/",
   prevVersion: [],
   editors: [{
     name: "Logius Standaarden",
