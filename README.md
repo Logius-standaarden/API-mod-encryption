@@ -19,6 +19,4 @@
 ## Over deze standaard
 
 NLgov REST API Design Rules is een lijst afspraken die ontwikkelaars volgen tijdens het bouwen van een REST-API voor de publieke sector.
-Door de regels te hanteren wordt de API voorspelbaar.
-En dat is wel zo prettig voor andere ontwikkelaars die er gebruik van willen maken.
-Dankzij deze regels blijft het makkelijk voor organisaties om gegevens met elkaar uit te wisselen.
+Deze module bevat aanvullende afspraken hoe encryptie geregeld moet worden en met welke algoritmen.
